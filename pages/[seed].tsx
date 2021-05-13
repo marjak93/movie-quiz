@@ -4,6 +4,7 @@ import { nanoid } from "nanoid";
 
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import titles from "../data/titles.json";
 import cast from "../data/cast.json";
@@ -50,14 +51,14 @@ export default function Page({ movieA, movieB, intersectingCast }: Props) {
   };
 
   return (
-    <div className="flex flex-col h-screen max-w-5xl mx-auto">
+    <div className="flex flex-col h-screen max-w-5xl p-8 mx-auto">
       <Head>
         <title>Movie Quiz</title>
         <meta name="description" content="My App" />
       </Head>
 
-      <main className="flex-grow mt-16">
-        <ul className="mt-16">
+      <main className="flex-grow mt-4 lg:mt-16">
+        <ul>
           <li>Movie A: {titles[movieA.title]}</li>
           <li>Movie B: {titles[movieB.title]}</li>
         </ul>
@@ -114,6 +115,20 @@ export default function Page({ movieA, movieB, intersectingCast }: Props) {
           </Link>
         </div>
       </main>
+      <footer>
+        <a
+          href="https://github.com/marjak93/movie-quiz"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            src="/GitHub-Mark-64px.png"
+            alt="GitHub"
+            width="32"
+            height="32"
+          />
+        </a>
+      </footer>
     </div>
   );
 }
