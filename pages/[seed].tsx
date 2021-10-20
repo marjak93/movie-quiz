@@ -104,14 +104,14 @@ export default function Page({ movieA, movieB, intersectingCast }: Props) {
 
         <div className="space-x-4">
           <button
-            className="p-3 mt-16 text-white bg-gray-500"
+            className="px-3 mt-16 text-white bg-gray-500 h-12"
             onClick={setHasGivenUp}
           >
             Show answers
           </button>
 
           <Link href={`/${nanoid()}`} passHref>
-            <a className="p-3 text-white bg-blue-600">Next</a>
+            <a className="px-3 text-white bg-blue-600 h-12">Next</a>
           </Link>
         </div>
       </main>
