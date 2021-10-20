@@ -96,7 +96,8 @@ export default function Page({ movieA, movieB, intersectingCast }: Props) {
 
             return (
               <li key={c.id} className="my-2">
-                {isGuessed ? "✅" : "❌"} {c.name}
+                <span className="mr-1">{isGuessed ? "✅" : "❌"} </span>
+                <span>{c.name}</span>
               </li>
             );
           })}
